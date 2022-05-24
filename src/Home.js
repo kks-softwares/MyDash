@@ -37,7 +37,7 @@ function Home() {
     if (!values.username) {
       errors.username = "*Username is required!";
     }
-    if (!values.phone === 10) {
+    if (!values.phone) {
       errors.phone = "*Phone Number is required!";
     }
     if (!values.email) {
@@ -111,14 +111,20 @@ function Home() {
                         <label style={{color:'#A7AFBB'}}>Your Phone No. <span>{formErrors.phone}</span></label>
                         <input
                         type="number"
-                        name="number"
+                        name="phone"
                         placeholder="Your Phone Number"
-                        value={formValues.number}
+                        value={formValues.phone}
                         onChange={handleChange}
                         />
                     </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        I read and agree Terms and Conditions
+                      </label>
+                    </div>
 
-                    <button className="fluid ui button blue">Submit</button>
+                    <button className="ui button blue mt-4">Submit</button>
                     </div>
                     </form>
                 </div>
